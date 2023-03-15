@@ -1,33 +1,15 @@
 * {
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: 'Playfair Display', serif; */
 }
 
 div {
   /* border: 1px solid black; */
 }
 
-/* Wrapper css */
-/* #wrapper {
-  width: 64em;
-  max-width: calc(100% - 4em);
-  margin: 0 auto;
+p {
+  font-size: 1.2rem;
+  font-weight: 500;
 }
-
-  @media screen and (max-width: 480px) {
-
-    #wrapper {
-      max-width: calc(100% - 2em);
-    }
-
-  }
-
-  @media screen and (max-width: 360px) {
-
-    #wrapper {
-      max-width: 100%;
-    }
-
-  } */
 
 body {
   background-image: linear-gradient(
@@ -38,13 +20,18 @@ body {
   );
 }
 
+.header-icon {
+  border-radius: 100%;
+}
+
 h2 {
+  font-size: 2.2rem;
   border-bottom: 1px solid #f5f5f5;
 }
 
 header,
 footer {
-  color: #fff;
+  color: #f5f5f5;
 }
 
 #wrapper {
@@ -59,6 +46,8 @@ footer {
   border-bottom-left-radius: 8px;
 
   border: 1px solid #f5f5f5;
+
+  color: #111;
 }
 
 #main,
@@ -67,10 +56,9 @@ footer {
 }
 
 header img {
-  align-self: center;
-  width: 14rem;
+  width: 15rem;
   border-radius: 100%;
-  border: 1px solid #f5f5f5;
+  border: .5px solid #f5f5f5;
   filter: grayscale(10%);
 }
 
@@ -80,8 +68,16 @@ main span {
 
 #header {
   padding: 5em 5em 1em 5em;
-  text-align: center;
   font-size: larger;
+
+  display: grid;
+  grid-template-columns: 75% 1fr;
+}
+
+#greeting {
+  font-weight: 900;
+  text-align: left;
+  font-size: 4rem;
 }
 
 #nav,
@@ -99,10 +95,10 @@ a {
 #nav,
 ul,
 li,
-a:hover{
+a:hover {
   font-size: medium;
   color: coral;
-  transition: .7s;
+  transition: 0.7s;
 }
 
 #nav {
@@ -117,13 +113,22 @@ a:hover{
   top: 0;
 }
 
-#nav:hover{
-  border-bottom: 1px solid coral;
+#nav:hover {
+  border-bottom: 2.5px solid coral;
 }
 
 #nav,
 li {
   padding: 0 1rem;
+}
+
+nav ul li {
+  margin: 0 4rem;
+}
+
+nav ul li a {
+  font-weight: 800;
+  color: #444;
 }
 
 section {
@@ -140,9 +145,11 @@ table {
   border-radius: 10px;
   padding: 1rem;
 }
-th {
-  border-bottom: 1px solid #f5f5f5;
+
+tbody {
+  color: #888888;
 }
+
 
 #bio {
   display: grid;
@@ -189,20 +196,44 @@ th {
   padding: 5rem;
 }
 
-#showcase{
+#showcase {
   padding: 3.5rem;
 }
 
-.holder{
+.holder {
   padding: 1rem;
 
   background-color: #f5f5f5;
   border-radius: 5px;
 }
 
-.gotocode {
+.goto {
+  margin: 2rem auto;
   display: flex;
-  
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.gotocode {
+  background-color: #333;
+  border: none;
+  color: #fff;
+
+  padding: 0.3rem;
+}
+
+.checkmeout {
+  background-color: coral;
+  border: none;
+  color: #fff;
+
+  padding: 0.3rem;
+}
+
+.gotocode:hover,
+.checkmeout:hover {
+  border-radius: 15px;
+  transition: 2s;
 }
 
 #footer {
@@ -228,4 +259,3 @@ dd {
 .techcon {
   width: 4rem;
 }
-
